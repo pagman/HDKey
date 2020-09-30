@@ -23,7 +23,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   final String SERVICE_UUID = "6e400001-b5a3-f393-e0a9-e50e24dcca9e";
   final String CHARACTERISTIC_UUID = "6e400002-b5a3-f393-e0a9-e50e24dcca9e";
-  final String TARGET_DEVICE_NAME = "myESP32";
+  final String TARGET_DEVICE_NAME = "HDKey";
   int flag = 0;
   FlutterBlue flutterBlue = FlutterBlue.instance;
   StreamSubscription<ScanResult> scanSubScription;
