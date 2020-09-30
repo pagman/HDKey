@@ -101,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
     flutterBlue.stopScan();
     print('stoped');
     scanSubScription = flutterBlue.scan().listen((scanResult) {
-      if (scanResult.device.name == TARGET_DEVICE_NAME) {
+      if (scanResult.device.name.contains(TARGET_DEVICE_NAME)) {
         setState(() {
           connectionText = "Device Discovered";
         });
