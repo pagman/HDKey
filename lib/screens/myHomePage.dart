@@ -115,11 +115,24 @@ class _MyHomePageState extends State<MyHomePage> {
           print(deviceBox.get(_selectedDropDownItem).meters);
         }
         if(scanResult.device.name.contains(TARGET_DEVICE_NAME)){
-          setState(() {
-            targetDevice = scanResult.device;
-            connectToDevice();
+          if(deviceBox.get(scanResult.device.name).auto==false) {
+            setState(() {
+              targetDevice = scanResult.device;
+              connectToDevice();
+            });
+          }
+            if(deviceBox.get(scanResult.device.name).auto==true) {
+              print('auto');
+              if(distance <= deviceBox.get(scanResult.device.name).meters){
+                print(deviceBox.get(scanResult.device.name).meters);
+                  setState(() {
+                    targetDevice = scanResult.device;
+                    connectToDevice();
+                    //disconnectFromDevice();
+                  });
+              }
 
-          });
+             }
           print(deviceBox.get(scanResult.device.name).name);
           print(deviceBox.get(scanResult.device.name).auto);
           print(deviceBox.get(scanResult.device.name).meters);

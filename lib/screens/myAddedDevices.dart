@@ -27,7 +27,7 @@ class _myAddedDevicesState extends State<myAddedDevices> {
 
                 return ListTile(
                   title: Text(device.name),
-                  subtitle: Text('Meters: '+device.meters.toString()),
+                  subtitle: Text('Meters: '+device.meters.toString()+"m Auto: "+device.auto.toString()),
                 );
               },
             );

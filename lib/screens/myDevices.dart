@@ -97,11 +97,11 @@ class _myDevicesState extends State<myDevices> {
                           ),
                           Column(
                             children: [
-                              Flexible(child: Text("Delete")),
+                              Flexible(child: Text("Distance")),
                               Flexible(
                                 child: IconButton(
                                   icon: Icon(
-                                    Icons.delete_outline,
+                                    Icons.add_location_outlined,
                                     size: 30.0,
                                     color: Colors.brown[900],
                                   ),
